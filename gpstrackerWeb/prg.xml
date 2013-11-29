@@ -1,0 +1,49 @@
+<configuration>
+    <appender name="STDOUT" class="LoggerAppenderConsole">
+        <layout class="LoggerLayoutPattern">
+            <param name="ConversionPattern" value="%-4r %-5p %d{d/M/yy H:m:s.S} [%18t] %25c %2x - %m%n"/>            
+        </layout>
+    </appender>
+    
+    <appender name="FILE_TXT" class="LoggerAppenderRollingFile">
+        <param name="File" value="mioDebug.txt"/>            
+        <param name="Threshold" value="info"/>            
+        <param name="MaxFileSize" value="1000KB"/>            
+        <param name="MaxBackupIndex" value="2"/>            
+        <layout class="LoggerLayoutPattern">
+            <param name="ConversionPattern" value="%-4r %-5p %d{d/M/yy H:m:s.S} [%18t] %25c %2x - %m%n"/>            
+        </layout>
+    </appender>
+    
+    <appender name="EMAIL" class="LoggerAppenderMailEvent">
+        <param name="To" value="francesco"/>            
+        <param name="From" value="francesco"/>                    
+        <param name="Subject" value="errore pogramma"/>                    
+        <param name="smtpHost" value=""/>                    
+        <param name="port" value="25"/>                    
+        <param name="username" value=""/>                    
+        <param name="password" value=""/>
+        <param name="smtpAuth" value="true"/>                    
+        
+        
+        <layout class="LoggerLayoutHtml" />
+    </appender>
+    
+    <appender name="FIREBUG" class="LoggerAppenderFireBug">
+        <layout class="LoggerLayoutPattern">
+            <param name="ConversionPattern" value="%-4r %-5p %d{d/M/yy H:m:s.S} [%18t] %25c %2x - %m%n"/>            
+        </layout>
+        
+        <param name="showStackTraceFrom" value="warn"/>                    
+    </appender>
+    
+    
+    <root>
+        <!--appender_ref ref="STDOUT"/-->
+        <appender_ref ref="FILE_TXT"/>            
+        <!--appender_ref ref="FIREBUG"/-->
+		<!--appender_ref ref="EMAIL"/--> <!-- mettere la password pure ! -->         
+    </root>
+
+        
+</configuration>

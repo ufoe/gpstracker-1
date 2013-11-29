@@ -1,0 +1,356 @@
+root { 
+    display: block;
+}
+
+body {
+    font-family: "Trebuchet MS", "Helvetica", "Arial",  "Verdana", "sans-serif";
+    font-size: 62.5%;
+    background-color: #D7D7D7;
+}
+
+/*.ui-buttonset 		{ margin-left: 5px !important;}*/
+.ui-button-text 	{ margin-left: 3px !important;}
+
+#bannerMenu			{ float:left;}
+#sortable			{ list-style-type: none; margin: 0; padding: 0; width: 150px; }
+#sortable li 		{ margin: 0 3px 3px 3px; padding: 0.4em; padding-left: 1.5em; font-size: 1.1em; height: 15px; }
+#sortable li span	{ position: absolute; margin-left: -1.3em; }
+
+
+.progress-label {
+    float: left;
+    margin-left: 50%;
+    margin-top: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+
+/* Sistemo overflow della data */
+.jqplot-target {
+    margin-right: 1.2em;
+}
+#tabellaRiba_radio	{ margin-bottom:5px;}
+
+
+li .ui-icon-close {
+    cursor: pointer;
+    float: left;
+    margin: 0.4em 0.2em 0 0;
+}
+
+/* --------------  ICONE BOTTONI  ----------------- */
+.customIconLogin{
+    background-image: url("../img/icon/login.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconLogout{
+    background-image: url("../img/icon/exit.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconHelp{
+    background-image: url("../img/icon/help.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconUpdate{
+    background-image: url("../img/icon/update.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+
+.customIconCerca{
+    background-image: url("../img/icon/find.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconHome{
+    background-image: url("../img/icon/home.png") !important;
+    background-position: 0px -2px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconContabile{
+    background-image: url("../img/icon/saldi.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconDocumenti {
+    background-image: url("../img/icon/archivio.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconArchivio {
+    background-image: url("../img/icon/archivio2.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconOrdini  {
+    background-image: url("../img/icon/order.png") !important;
+    background-position: 0px -2px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconDdt {
+    background-image: url("../img/icon/ddt.png") !important;
+    background-position: 0px -2px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconFatture {
+    background-image: url("../img/icon/invoice.png") !important;
+    background-position: 0px -2px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconUser {
+    background-image: url("../img/icon/user.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 20px;	
+}
+
+.customIconAnagrafiche {
+    background-image: url("../img/icon/user.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 20px;	
+}
+
+.customIconMagazzino {
+    background-image: url("../img/icon/magazzino.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconArticoli {
+    background-image: url("../img/icon/package.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconArticoliB {
+    background-image: url("../img/icon/articles-blu.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconArticoliV {
+    background-image: url("../img/icon/articles-verde.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconArticoliA {
+    background-image: url("../img/icon/articles-arancio.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconArticoliG {
+    background-image: url("../img/icon/articles-giallo.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconTransfer {
+    background-image: url("../img/icon/load.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconTotali {
+    background-image: url("../img/icon/Chart.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconRilasci {
+    background-image: url("../img/icon/line_chart.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconTabelle {
+    background-image: url("../img/icon/impostazioni.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconEmail {
+    background-image: url("../img/icon/email.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconCliSco {
+    background-image: url("../img/icon/clisco.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconSalva {
+    background-image: url("../img/icon/hdd_unmount.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconNuovo {
+    background-image: url("../img/icon/filenew.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconCancella {
+    background-image: url("../img/icon/cancel.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconOverview{
+    background-image: url("../img/icon/archivio.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconReport{
+    background-image: url("../img/icon/pie_chart.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconOpzioni{
+    background-image: url("../img/icon/misc-16x16.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconLogOut {
+    background-image: url("../img/icon/exit.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+.customIconPdf {
+    background-image: url("../img/fileIcons/dim16x16/pdf.png") !important;
+    background-position: 0px 0px; 
+    /*height: 20px;
+    width: 20px;	*/
+}
+
+
+
+.progress-label {
+    float: left;
+    margin-left: 50%;
+    margin-top: 5px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    
+    background-color: rgba(255, 255, 255, 0.3);
+    color: black;
+}
+
+
+.customIconAdd {
+    background-image: url("../img/icon/add.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+.customIconCopy {
+    background-image: url("../img/icon/copia.png") !important;
+    background-position: 0px 0px; 
+    height: 18px;
+    width: 18px;	
+}
+
+
+
+
+
+ol {
+    padding: 0px;
+}
+
+
+
+
+/* FINESTRE DIV */
+.lara-content {   
+    position: relative;
+}
+.lara-content .ui-widget-header {
+    padding: 0.3em 0.2em 0.2em 0.3em;
+}
+.lara-titolo {
+    left: 10px;
+    position: absolute;
+    float: left;
+    top: -9px;
+    padding-right: 5px;
+    
+    
+    
+    /*background: url("images/ui-bg_inset-hard_5_F7F7F7_1x100.png") repeat-x scroll 50% bottom #F7F7F7;*/
+    background-color: #F7F7F7;
+    border: 1px solid #0B333C;
+    /*color: #C5CFD2;*/
+    font-weight: bold;
+    padding-left: 5px;    
+}
+
+
+/* ALERTIFY */
+.alertify-logs {
+    font-size: 16px;
+}
+
+.alertify.debug {
+    background-color: #ffe45c;
+    color: black;
+}
+
+/* TIPI DI CAMPI DI INPUT */
+.laraCurrency {
+    text-align: right;
+}
+.laraSpaziatoADestra {
+    margin-right: 2em;
+}
