@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-11-30 11:16:00
+<?php /* Smarty version Smarty-3.1.12, created on 2013-11-30 21:08:28
          compiled from "smartyFra/templates/segui.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:65423221952946cb6a70098-95265202%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0516ed25c63df4e81f92341dc4eee520be55844a' => 
     array (
       0 => 'smartyFra/templates/segui.tpl',
-      1 => 1385806557,
+      1 => 1385842107,
       2 => 'file',
     ),
     'c4fe4647eb994b98c8fe94b41be278b06f5f7032' => 
@@ -54,8 +54,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <style>
         .smallmap {
             border: 1px solid #ccc;
-            width: 100%
-;            height: 100%;
+            width: 90%
+;            height: 90%;
         }
         
     </style>
@@ -221,6 +221,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             <h3>Funzioni</h3>
                 
             
+            <div class="dettagli">
+                Data: <span id="PNT_DTA" class="autoFra"></span><br/>
+                Sessione: <span id="PNT_SES" class="autoFra"></span><br/>
+                Speed: <span id="PNT_SPEED" class="autoFra"></span><br/>
+                Bearing: <span id="PNT_BEARING" class="autoFra"></span><br/>
+                
+                
+                <img id="sat0" src="img/satellitenofix24.png">
+                <img id="sat1" src="img/satellitenofix24.png">
+                <img id="sat2" src="img/satellitenofix24.png">
+                <img id="sat3" src="img/satellitenofix24.png">
+                <img id="sat4" src="img/satellitenofix24.png">
+                <img id="sat5" src="img/satellitenofix24.png">
+                <img id="sat6" src="img/satellitenofix24.png">
+                <img id="sat7" src="img/satellitenofix24.png">
+                <img id="sat8" src="img/satellitenofix24.png">
+                <img id="sat9" src="img/satellitenofix24.png">
+                
+            </div>
+            
                 
         </div>
     </div>
@@ -232,8 +252,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     size: "auto"
                     , onresize: function(pname, pelement, pstate, poptions, lame) {
                         $(".smallmap").css( {
-                            width: pstate.innerWidth-2,
-                            height: pstate.innerHeight-2
+                            width: pstate.innerWidth-5,
+                            height: pstate.innerHeight-3
                         });
                         
                         init();
@@ -267,6 +287,44 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     var point=res.data.point;
                     
                     fbLog("point",point); 
+                  
+                  
+                     $("#bc .autoFra").each(function() {
+                        //fbLog("this",this);
+                        var res=point;
+                        
+                        if ($(this).attr("type")==="checkbox") {
+                            $(this).prop('checked', trueOrfalse(res[$(this).attr("id")]));                            
+                        } else if ($(this).is("span")) {
+                            $(this).html(res[$(this).attr("id")]);
+                        } else if ($(this).hasClass("selectText")) {
+                            var gsId=$(this).attr("id");
+                            var gsValore=res[gsId];
+                            var testoT=$("#gs_"+gsId+" option[value='"+gsValore+"']").text();
+                            
+                            $(this).autoCompleteSetId(gsValore,testoT);
+                        } else {
+                            $(this).val(res[$(this).attr("id")]);
+                        }
+                    });
+                    
+                    for (var t=0;t<10;t++) {
+                        
+        
+        
+                        if (t<point.PNT_SATSFIX) {
+                            $("#sat"+t).fadeIn("slow");
+                            $("#sat"+t).attr("src","img/satellitefix24.png");
+                        } else {
+                            if (t<point.PNT_SATS) {
+                                $("#sat"+t).fadeIn("slow");
+                                $("#sat"+t).attr("src","img/satellitenofix24.png");
+                            } else {
+                                $("#sat"+t).fadeOut("slow");
+                            }
+                        }
+                    }
+                    
                   
                     var consenso=(lastPos===null);
                     var newPos=new OpenLayers.LonLat(point.PNT_LON, point.PNT_LAT);

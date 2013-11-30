@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-11-26 10:39:23
+<?php /* Smarty version Smarty-3.1.12, created on 2013-11-30 20:32:07
          compiled from "smartyFra/templates/pulsantiera.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:166185270552946c4b0d49d8-62045498%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '4b75c46f07d995882b25a629496d4107be1ec37c' => 
     array (
       0 => 'smartyFra/templates/pulsantiera.tpl',
-      1 => 1385458447,
+      1 => 1385804468,
       2 => 'file',
     ),
   ),
@@ -15,22 +15,22 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.12',
+  'unifunc' => 'content_52946c4b109dd6_69124055',
   'variables' => 
   array (
     'admin' => 0,
     'alertDebugAbilitato' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.12',
-  'unifunc' => 'content_52946c4b109dd6_69124055',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_52946c4b109dd6_69124055')) {function content_52946c4b109dd6_69124055($_smarty_tpl) {?><div class="ui-layout-north">
     <div class="pulsantiera ui-widget-header ui-corner-all" style="padding-left: 0px;">
-        <a data-icona='customIconHome' data-tv='false' href='index.php?template=menuHome.tpl&cache=0' class="mc">Home</a>
+        <!--a data-icona='customIconHome' data-tv='false' href='index.php?template=menuHome.tpl&cache=0' class="mc">Home</a>
         <a data-icona='customIconContabile' data-tv='true' href='index.php?template=menuContabilita.tpl&cache=0' class="mc" title="Accedi al menu contabile" >Contabilit&agrave;</a>
         <a data-icona='customIconOrdini' data-tv='true' href='index.php?template=menuOrdini.tpl&cache=0' class="mc">Ordini</a>
         
-        <a data-icona='customIconDdt' data-tv='true' href='index.php?template=menuDdt.tpl&cache=0' class="mc" onmouseover='creaMenu("menuDDT",this);'>Ddt</a>        
+        <a data-icona='customIconDdt' data-tv='true' href='index.php?template=menuDdt.tpl&cache=0' class="mc" onmouseover='creaMenu("menuDDT",this);'>Ddt</a-->
         
                 
         <a data-icona='customIconFatture' data-tv='true' href='index.php?template=segui.tpl&cache=0' class="mc">Segui</a>
