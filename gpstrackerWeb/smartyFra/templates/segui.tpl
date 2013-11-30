@@ -212,10 +212,11 @@
                   
                     var consenso=(lastPos===null);
                     var newPos=new OpenLayers.LonLat(point.PNT_LON, point.PNT_LAT);
+                    var newPosTrasform=new OpenLayers.LonLat(point.PNT_LON, point.PNT_LAT).transform( new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                     if (lastPos!==null) {
                         
-                        var distance=getDistanceFromLatLonInKm(newPos.lat,newPos.lon,lastPos.lat,lastPos.lon)/1000;
-                        
+                        var distance=getDistanceFromLatLonInKm(newPos.lat,newPos.lon,lastPos.lat,lastPos.lon)*1000;
+                        fbLog("distance",distance);
                         if (distance>10) {
                             fbLog("distance",distance);
                             consenso=true;
@@ -223,7 +224,7 @@
                     }
                   
                   if (consenso) {
-                        map.setCenter(newPos.transform( new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()) , 13);
+                        map.setCenter(newPosTrasform , 13);
 
                         layerImpianti.removeMarker(marker);                    
                         addMarker(point.PNT_LON, point.PNT_LAT);
@@ -234,13 +235,14 @@
                       lastPos=newPos;
                   }
                     
+                    setTimeout(aggiornaPosizione,5000 );
                 }
                 ,function(res) { 
                     fbLog("res",res); 
                 }
             );
            
-            setTimeout(aggiornaPosizione,5000 );
+            
         }
      </script>
 

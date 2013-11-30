@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-11-29 18:11:19
+<?php /* Smarty version Smarty-3.1.12, created on 2013-11-30 11:16:00
          compiled from "smartyFra/templates/segui.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:65423221952946cb6a70098-95265202%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '0516ed25c63df4e81f92341dc4eee520be55844a' => 
     array (
       0 => 'smartyFra/templates/segui.tpl',
-      1 => 1385745077,
+      1 => 1385806557,
       2 => 'file',
     ),
     'c4fe4647eb994b98c8fe94b41be278b06f5f7032' => 
@@ -270,10 +270,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   
                     var consenso=(lastPos===null);
                     var newPos=new OpenLayers.LonLat(point.PNT_LON, point.PNT_LAT);
+                    var newPosTrasform=new OpenLayers.LonLat(point.PNT_LON, point.PNT_LAT).transform( new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject());
                     if (lastPos!==null) {
                         
-                        var distance=getDistanceFromLatLonInKm(newPos.lat,newPos.lon,lastPos.lat,lastPos.lon)/1000;
-                        
+                        var distance=getDistanceFromLatLonInKm(newPos.lat,newPos.lon,lastPos.lat,lastPos.lon)*1000;
+                        fbLog("distance",distance);
                         if (distance>10) {
                             fbLog("distance",distance);
                             consenso=true;
@@ -281,7 +282,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                     }
                   
                   if (consenso) {
-                        map.setCenter(newPos.transform( new OpenLayers.Projection("EPSG:4326"), map.getProjectionObject()) , 13);
+                        map.setCenter(newPosTrasform , 13);
 
                         layerImpianti.removeMarker(marker);                    
                         addMarker(point.PNT_LON, point.PNT_LAT);
@@ -292,13 +293,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                       lastPos=newPos;
                   }
                     
+                    setTimeout(aggiornaPosizione,5000 );
                 }
                 ,function(res) { 
                     fbLog("res",res); 
                 }
             );
            
-            setTimeout(aggiornaPosizione,5000 );
+            
         }
      </script>
 

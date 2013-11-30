@@ -1,5 +1,13 @@
 <?php
-include_once ("login.php");
+include_once 'functions.php';
+require_once("inclusione.inc.php");
+if (getGet("nol",0)!=0) {
+    // no login required
+    include_once ("login.php");    
+}
+
+    
+
 include_once ("queries.php");
 include_once ("BfaUtilities.php");
 
@@ -295,7 +303,7 @@ $SQL=  generaQueryDaTemplateQuery($SQL1);
 if (isset( $queries[$query."_count"])) {
     $queryCount =  generaQueryDaTemplateQuery($queries[$query."_count"]);
 } else {
-    $queryCount1 = preg_replace("/SELECT.*FROM/", "SELECT COUNT(*) FROM", $SQL,1);
+    $queryCount1 = preg_replace("/SELECT.* FROM/", "SELECT COUNT(*) FROM", $SQL,1);
     $queryCount = preg_replace("/order\ by.*/", "", $queryCount1 ,1);
 }
 
@@ -346,6 +354,7 @@ foreach ($rows as $row) {
 	}
 
     $responce["rows"][] = $row;
+
     $t++;
 }
 

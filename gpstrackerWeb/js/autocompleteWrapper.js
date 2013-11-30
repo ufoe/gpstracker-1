@@ -2,7 +2,7 @@
 // **********************************
 // CREAZIONE AUTOCOMPLETE
 // **********************************
-$.fn.generaAutoComplete = function(query, dest,callbackF) {
+$.fn.generaAutoComplete = function(query, dest,callbackF,parametri) {
     return this.each(function() {
         $(this).autocomplete({
             source: "autocompletamento.php?query=" + query
@@ -71,7 +71,9 @@ $.fn.generaAutoComplete = function(query, dest,callbackF) {
             }
         });
     
-        $(this).data("parametri",{});
+        parametri= parametri || {};
+    
+        $(this).data("parametri",parametri);
         $(this).data("query",query);                
     });
 };

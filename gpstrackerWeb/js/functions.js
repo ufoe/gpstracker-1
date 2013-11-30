@@ -268,12 +268,15 @@ Date.prototype.getWeek = function() {
 
 function executeFunctionByName(functionName, context /*, args */) {
     var args = Array.prototype.slice.call(arguments, 2);
-    var namespaces = functionName.split(".");
-    var func = namespaces.pop();
-    for (var i = 0; i < namespaces.length; i++) {
-        context = context[namespaces[i]];
+    if (functionName !== undefined) {
+        var namespaces = functionName.split(".");
+        var func = namespaces.pop();
+        for (var i = 0; i < namespaces.length; i++) {
+            context = context[namespaces[i]];
+        }
+        return context[func].apply(context, args);
     }
-    return context[func].apply(context, args);
+    
 };
 
 
@@ -322,3 +325,13 @@ function setVariabileDiSessione(name,value,callback) {
         onError: function() { }
     });
 }
+
+(function ( $ ) {
+    $.fn.checkboxValue= function() {
+        if (this.is(":checked")) {
+            return 1;
+        }
+        
+        return 0;
+    };
+}( jQuery ));

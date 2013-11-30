@@ -3,7 +3,13 @@ header('Cache-Control: no-cache, must-revalidate');
 header('Expires: Mon, 26 Jul 1997 05:00:00 GMT');
 header('Content-type: application/json');
 
-include_once ("login.php");
+include_once 'functions.php';
+require_once("inclusione.inc.php");
+if (getGet("nol",0)!=0) {
+    // no login required
+    include_once ("login.php");    
+}
+
 include_once ("queries.php");
 
 //sleep(4);

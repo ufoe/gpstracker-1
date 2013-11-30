@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.12, created on 2013-11-26 11:08:34
+<?php /* Smarty version Smarty-3.1.12, created on 2013-11-30 10:45:46
          compiled from "smartyFra/templates/javascript_css.tpl" */ ?>
 <?php /*%%SmartyHeaderCode:98623916752946cb6b8e747-84642047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6cacbd0407a7a10a2aa90eae92851c06b5c4810d' => 
     array (
       0 => 'smartyFra/templates/javascript_css.tpl',
-      1 => 1385460507,
+      1 => 1385804744,
       2 => 'file',
     ),
   ),
@@ -92,7 +92,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <script src="js/finestra.js?ver=<?php echo $_smarty_tpl->tpl_vars['VERSIONE']->value;?>
 " type="text/javascript"></script>
 
-<script src="js/codaMessaggi.js" type="text/javascript"></script>
+<script src="js/codaMessaggi.js?ver=<?php echo $_smarty_tpl->tpl_vars['VERSIONE']->value;?>
+" type="text/javascript"></script>
+
+
+
+
+
+
 
 
 <script src="js/jquery.autosize<?php echo $_smarty_tpl->tpl_vars['min']->value;?>

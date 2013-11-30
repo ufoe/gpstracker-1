@@ -20,6 +20,7 @@ foreach (Config::getConfigs() as $config_) {
 }
 $smarty->assign("config",  $c);
 
+$smarty->assign("admin", false);
 
 if (getGet("cache",1)==1) {
     $smarty->caching = true;

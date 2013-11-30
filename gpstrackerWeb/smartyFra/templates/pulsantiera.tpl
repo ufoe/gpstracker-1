@@ -1,10 +1,10 @@
 <div class="ui-layout-north">
     <div class="pulsantiera ui-widget-header ui-corner-all" style="padding-left: 0px;">
-        <a data-icona='customIconHome' data-tv='false' href='index.php?template=menuHome.tpl&cache=0' class="mc">Home</a>
+        <!--a data-icona='customIconHome' data-tv='false' href='index.php?template=menuHome.tpl&cache=0' class="mc">Home</a>
         <a data-icona='customIconContabile' data-tv='true' href='index.php?template=menuContabilita.tpl&cache=0' class="mc" title="Accedi al menu contabile" >Contabilit&agrave;</a>
         <a data-icona='customIconOrdini' data-tv='true' href='index.php?template=menuOrdini.tpl&cache=0' class="mc">Ordini</a>
         
-        <a data-icona='customIconDdt' data-tv='true' href='index.php?template=menuDdt.tpl&cache=0' class="mc" onmouseover='creaMenu("menuDDT",this);'>Ddt</a>        
+        <a data-icona='customIconDdt' data-tv='true' href='index.php?template=menuDdt.tpl&cache=0' class="mc" onmouseover='creaMenu("menuDDT",this);'>Ddt</a-->
         
                 
         <a data-icona='customIconFatture' data-tv='true' href='index.php?template=segui.tpl&cache=0' class="mc">Segui</a>

@@ -36,7 +36,13 @@
 
 <script src="js/finestra.js?ver={$VERSIONE}" type="text/javascript"></script>
 
-<script src="js/codaMessaggi.js" type="text/javascript"></script>
+<script src="js/codaMessaggi.js?ver={$VERSIONE}" type="text/javascript"></script>
+
+
+
+
+
+
 
 {* 
     AUTOSIZE TEXT AREA
